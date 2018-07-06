@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Vidalokat');
+body{
+	background:#ececec;
+	font-family: 'Vidaloka', serif;
+    line-height:2em;
+    overflow-x: hidden;
+}
+.fuild-container{
+    width: 100%;
+}
+header{
+    background:#082592;
+    color: white;
+    border-top: 3px saddlebrown;
+}
+header .container{
+    width: 100% !important;
+}
+header h1{
+    font-size: 180%;
+}
+  .nav-scroller .nav-links {
+    flex-basis: 10%;
+    background: white;
+  }
