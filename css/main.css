@@ -8,6 +8,9 @@ body{
 .fuild-container{
     width: 100%;
 }
+.w-80{
+    width: 80%;
+}
 header{
     background:#082592;
     color: white;
@@ -19,7 +22,34 @@ header .container{
 header h1{
     font-size: 180%;
 }
-  .nav-scroller .nav-links {
+.nav-scroller .nav-links {
     flex-basis: 10%;
     background: white;
+}
+.bg-control{
+    background: #111;
+    opacity: 0.2;
+  }
+.bg-white{
+    background: white;
+}
+#second-section{
+    background: #cce5e6;
+}
+.second-box-section ul,.second-box-section .btn-link{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#second-box-section-tab li{
+    flex:2;
+}
+  @media (max-width:750px){
+      .second-box-section{
+        flex: 1 0 100%;
+    max-width: 100%;
+
+      }
   }
