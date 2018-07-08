@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Vidalokat');
-
+@import url("./bootstrap.css");
+@import url("./font-awesome.min.css");
 body{
 	background:#ececec;
 	font-family: 'Vidaloka', serif;
@@ -42,13 +43,12 @@ a{
 #second-box-section-tab li{
     flex:2;
 }
-.copyright{
-    display: inline-block;
-    position: relative;
-	top: -9px;
-	color: #333;
-}
 
+.footer-box-section{
+    margin:5px;
+    flex:1 0 30% !important;
+    background: whitesmoke;
+}
 .social-navbar{
 	width:240px;
 	margin: 5px auto;
@@ -91,6 +91,12 @@ background: #3b5998 ;
     }
     #second-section .nav-link{
         padding:.5rem;
+    }
+    .footer-section{
+        flex-direction: column;
+    }
+    .footer-box-section{
+        flex:1 0 90% !important;
     }
 }
 @media (max-width:580px){
