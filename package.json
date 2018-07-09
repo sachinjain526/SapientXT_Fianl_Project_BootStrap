@@ -12,8 +12,8 @@
   "description": "",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0",
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap": "^4.0.0-alpha.6",
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
     "browser-sync": "^2.24.5",
