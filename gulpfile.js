@@ -1,31 +1,27 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browser = require('browser-sync').create();
-gulp.task('clean', function () {
-    // You can use multiple globbing patterns as you would with `gulp.src`
-    return del(['build']);
-});
-gulp.task('sass', function () {
-    return gulp.src("src/scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("src/css"))
-        .pipe(browserSync.stream());
-});
-gulp.task('js', ['clean'], function () {
-    return gulp.src(["node_module/"])
-        .pipe(browserify())
-        .pipe(uglify())
-        .pipe(gulp.dest("./src/js"))
-        .pipe(browserSync.stream());
-});
-gulp.task('serve', ['sass'], function () {
-    browserSync.init({
-        server: "./src"
-    });
-    gulp.watch("src/scss/*.scss", ['sass']);
-    gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
-});
 
+gulp.task('sass', function () {
+    return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
+        .pipe(sass())
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+gulp.task('browser-sync', function () {
+    browserSync.init(["css/*.css", "js/*.js"], {
+        server: {
+            baseDir: "./app"
+        }
+    });
+});
+gulp.task('watch', ['browserSync', 'sass'], function () {
+    gulp.watch('app/scss/**/*.scss', ['sass']);
+    // Reloads the browser whenever HTML or JS files change
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
+});
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['serve']);
+gulp.task('default', ['watch']);
