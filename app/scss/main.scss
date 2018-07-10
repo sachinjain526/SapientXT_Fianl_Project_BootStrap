@@ -38,22 +38,12 @@ body{
 #carouselExampleControls img{
     width: 90%;
 }
-#head-nav{
-    li{
-        @include flexScreen(10%);
-        text-align: $text-align;
-    }
-    a{
-        color: $white;
-    }
-}
 #main-navbar{
-   background:  #ced9e6;
-   @include flexDirection(row !important);
+    background: #2974ce;
    .nav-item {
-        @include flexScreen(16.8%);
+        @include flexScreen(42%);
         border-right: 1px solid $white;
-        @include textprop(16px,$link-color);
+        @include textprop(20px,$link-color);
         a{
             color:$link-color;
         }
@@ -121,25 +111,20 @@ background: #3b5998 ;
 .social-link li:nth-child(5){ 
 	background: #cb2027 ;
 }
+
 /* media query for bleo 900 px*/
+@media (max-width:1200px) and (min-width:901px){
+    .quates-box-section{
+        @include flexScreen(33.3%);
+    }
+}
   @media (max-width:900px){
-    #head-nav{
-        li{
-            @include flexScreen(20%);
-            @include textprop(16px,$white);
-        }
-    }
-   #main-navbar{
-    .nav-item {
-       text-align: left;
-    }
-   }
     .second-box-section, .footer-box-section{
         @include flexScreen(100%);
         margin-bottom: 10px;
     }
     .quates-box-section{
-        @include flexScreen(100%);
+        @include flexScreen(50%);
     }
     #second-section .nav-link{
         padding:.5rem;
@@ -150,26 +135,8 @@ background: #3b5998 ;
 }
 /* media query for bleo 580 px*/
 @media (max-width:580px){
-    #head-nav{
-        justify-content: space-between !important;
-        li{
-            @include flexScreen(50%);
-        }
-    }
     .quates-box-section{
         @include flexScreen(100%);
-    }
-    #main-navbar{
-        .nav{
-         @include flexDirection(column !important);
-        }
-         .nav-item {
-            flex:1 !important;
-            max-width: 100%;
-            border: 0;
-            border-bottom:2px solid $white;
-            @include textprop(18px, $link-color);
-         }
     }
     .collapse-content{
         display: none;

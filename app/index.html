@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">DigiTransform</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="main-navbar">
+        <a class="navbar-brand" href="#" id="main-header">DigiTransform</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,24 +57,6 @@
             </form>
         </div>
     </nav>
-    <header class="p-2">
-        <nav my-2>
-            <ul class="nav justify-content-end" id="head-nav">
-                <li class="nav-item">
-                    <a class="nav-link btn-primary mr-1" href="#">Login
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item btn-danger mr-1">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item d-none">
-                    <a class="nav-link" href="#">Sign Out</a>
-                </li>
-            </ul>
-        </nav>
-        <h3 id="main-header" class="mt-3">DigiTransform</h3>
-    </header>
     <main>
         <div id="digiCarousel" class="carousel slide w-100" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -84,7 +66,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="./assets/Carousel-1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="./assets/Carousel-1.png" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Digitalize Bussiness</h5>
                         <p>Instead of the cashier and ticket-ripper of the movie theater, the block chain consists of thousands
@@ -371,11 +353,11 @@
             <div class="col-4 p-3 footer-box-section my-2">
                 <section>
                     <h3>Subscribe Us</h3>
-                    <form action="/" method="post" class="form-inline">
-                        <label for="EmailAdd" aria-label="Email address">
+                    <form action="/" method="post" class="form-inline" id="subscribeForm">
+                        <!-- <label for="EmailAdd" aria-label="Email address">
                             <i class="fa fa-envelope-square form-icon"></i>
-                        </label>
-                        <input type="email" name="EmailAdd" id="EmailAdd" placeholder="Email" class="form-control w-75">
+                        </label> -->
+                        <input type="email" name="EmailAdd" id="EmailAdd" placeholder="Email" class="form-control w-75 mx-auto">
                         <button type="submit" class="btn btn-primary w-50 mx-auto my-2 p-2">Submit</button>
                     </form>
                 </section>
