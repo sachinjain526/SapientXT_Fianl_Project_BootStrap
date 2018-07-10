@@ -11,7 +11,7 @@ gulp.task('sass', function () {
         }));
 });
 gulp.task('js', function () {
-    return gulp.src(['node_modules\jquery\dist\jquery.min.js', 'node_modules\bootstrap\dist\js\bootstrap.js', '']) // Gets all files ending with .scss in app/scss
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/popper.js/dist/popper.min.js']) // Gets all files ending with .scss in app/scss
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -32,4 +32,4 @@ gulp.task('watch', ['browser-sync', 'sass'], function () {
 });
 //The default task (called when you run `gulp` from cli)
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['js', 'watch']);

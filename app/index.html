@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <header class="header clearfix">
-        <nav>
-            <ul class="nav nav-pills float-right">
+    <header class="p-2">
+        <nav my-2>
+            <ul class="nav justify-content-end" id="head-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Login
+                    <a class="nav-link btn-primary mr-1" href="#">Login
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item btn-danger mr-1">
                     <a class="nav-link" href="#">Sign Up</a>
                 </li>
                 <li class="nav-item d-none">
@@ -26,12 +26,12 @@
                 </li>
             </ul>
         </nav>
-        <h3 class="text-muted">DigiTransform</h3>
+        <h3 id="main-header" class="mt-3">DigiTransform</h3>
     </header>
-    <nav class="navbar navbar-expand-sm" id="main-navbar">
+    <nav class="navbar navbar-expand-sm mb-1 p-1" id="main-navbar">
         <ul class="nav w-100 justify-content-between">
             <li class="nav-item">
-                <a class="nav-link active" href="javascript:void(0)">Technology</a>
+                <a class="nav-link active pl-1" href="javascript:void(0)">Technology</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">Design</a>
@@ -51,11 +51,11 @@
         </ul>
     </nav>
     <main>
-        <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel">
+        <div id="digiCarousel" class="carousel slide w-100" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#digiCarouselInd" data-slide-to="0" class="active"></li>
+                <li data-target="#digiCarouselInd" data-slide-to="1"></li>
+                <li data-target="#digiCarouselInd" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -88,11 +88,11 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev bg-control" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev bg-control" href="#digiCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next bg-control" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next bg-control" href="#digiCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -110,7 +110,7 @@
                             <a class="nav-link" id="how-tab" data-toggle="tab" href="#how" role="tab" aria-controls="how" aria-selected="false">HOW</a>
                         </li>
                     </ul>
-                    <div class="tab-content bg-white p-3 lead" id="myTabContent">
+                    <div class="tab-content p-3 lead" id="myTabContent">
                         <div class="tab-pane fade show active" id="why" role="tabpanel" aria-labelledby="why-tab">
                             <p> Digitization is the process of converting information into a digital format . In this format,
                                 information is organized into discrete units of data (called bit s) that can be separately
@@ -172,7 +172,7 @@
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body lead">
+                                <div class="card-body lead p-1">
                                     Transitioning to a fully digital enterprise requires a mixture of capabilities. It needs the right leadership, strategy and
                                     vision and will inevitably mean cultural and organisational changes. It will need a new
                                     and unfettered way of generating and executing ideas. It will need strong focus on the
@@ -192,7 +192,7 @@
                                 </h5>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body lead">
+                                <div class="card-body lead  p-1">
                                     Rapid Execution and Delivery of digital initiatives is vital. Does your organisation have an efficient way of generating
                                     ideas for digital initiatives and can it execute on these quickly. The process used for
                                     developing a digital initiative must be designed from a complete User Experience perspective
@@ -214,7 +214,7 @@
                                 </h5>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body lead">
+                                <div class="card-body lead  p-1">
                                     Your organisation will need to adopt an entrepreneurial mindset and embed it in its culture. Your staff are already using
                                     digital technologies to make gradual but significant changes to their daily lives as
                                     consumers, they are going to expect the same as employees. They will have ideas. Leading
@@ -236,7 +236,7 @@
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body lead">
+                                <div class="card-body lead  p-1">
                                     When building digital solutions, it is best to build a digital platform upon which, new code is written but which interfaces
                                     to all key services in legacy and 3rd party applications. The platform should interface
                                     to all social networking platforms and support engagement with customers through any
@@ -270,7 +270,7 @@
                         </footer>
                     </blockquote>
                 </div>
-                <div class="card bg-success text-center p-3 col-2 quates-box-section">
+                <div class="card bg-info text-center p-3 col-2 quates-box-section">
                     <blockquote class="blockquote mb-0">
                         <p>Today, companies have to radically revolutionize themselves every few years just to stay relevant.
                             That's because technology and the Internet have transformed the business landscape forever. The
@@ -296,7 +296,7 @@
                         </footer>
                     </blockquote>
                 </div>
-                <div class="card bg-success text-center p-3 col-2 quates-box-section">
+                <div class="card bg-info text-center p-3 col-2 quates-box-section">
                     <blockquote class="blockquote mb-0">
                         <p>The Fifties and Sixties were years of unreal optimism about weather forecasting. Newspapers and magazines
                             were filled with hope for weather science, not just for prediction but for modification and control.
@@ -321,7 +321,7 @@
                         </footer>
                     </blockquote>
                 </div>
-                <div class="card bg-success text-center p-3 col-2 quates-box-section">
+                <div class="card bg-info text-center p-3 col-2 quates-box-section">
                     <blockquote class="blockquote mb-0">
                         <p>We believe digital payments are making financial services more universally affordable, accessible
                             and, therefore, have the opportunity to drive financial inclusion and financial health for billions
@@ -341,15 +341,15 @@
     </main>
     <footer class="text-center">
         <div class="contianer-fuild mt-3 d-flex justify-content-between footer-section">
-            <div class="col-4 p-3 footer-box-section my-2">
+            <div class="col-4 p-3 footer-box-section my-2 mx-1">
                 <section>
                     <h3>Subscribe Us</h3>
                     <form action="/" method="post" class="form-inline">
                         <label for="EmailAdd" aria-label="Email address">
                             <i class="fa fa-envelope-square form-icon"></i>
                         </label>
-                        <input type="email" name="EmailAdd" id="EmailAdd" placeholder="Email" class="form-control">
-                        <button type="submit" class="btn btn-primary w-75 mx-auto my-2 p-2">Submit</button>
+                        <input type="email" name="EmailAdd" id="EmailAdd" placeholder="Email" class="form-control w-75">
+                        <button type="submit" class="btn btn-primary w-50 mx-auto my-2 p-2">Submit</button>
                     </form>
                 </section>
             </div>
@@ -387,12 +387,12 @@
                 </ul>
             </div>
         </div>
-        <div class="copyright">
+        <div class="copyright my-2">
             <strong> Copyright &copy; 2018 -DigiTransfrom</strong>
         </div>
     </footer>
     <!-- All Java Script Rleted file-->
-    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.js"></script>
 </body>

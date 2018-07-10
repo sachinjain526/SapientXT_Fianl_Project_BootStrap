@@ -1,37 +1,52 @@
 $body-bg:#ececec !default;
 $white:#fff;
+$font-weight:bold;
+$text-align:center;
+$link-color:#721c24;
 @mixin flexScreen($input) {
     flex:1 0 $input !important;
     max-width: $input;
-  }
+}
+@mixin textprop($fontSize,$fontColor) {
+    text-align: $text-align;
+    font-weight:  $font-weight;
+    text-decoration: none;
+    white-space: normal;
+    color:$fontColor;
+    font-size: $fontSize; 
+}
+@mixin flexDirection($input) {
+    flex-direction:$input;
+}
 @import "node_modules/bootstrap/scss/bootstrap";
 // @import url("./font-awesome.min.css");
-body{
-	font-family: 'Vidaloka', serif;
-    line-height:2em;
-    overflow-x: hidden;
-}
-a{
-    color:  #721c24;
-}
 
+// main css start form here
+body{
+    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+}
+#main-header{
+    @include textprop(32px, #0a556b);
+    text-shadow: 5px 4px 5px #aeaebf;
+}
 #carouselExampleControls img{
     width: 90%;
 }
 #main-navbar{
-   background:  #1e2e40;
-   font-size: 21px;
-   flex-direction: row !important;
-}
- .nav-item {
-    @include flexScreen(16.8%);
-    background: $white;
-    border-right: 1px solid black;
-    text-align: center;
-    font-weight: bold;
-}
-.bg-white{
-    background: $white;
+   background:  #ced9e6;
+   @include flexDirection(row !important);
+   .nav-item {
+        @include flexScreen(16.8%);
+        border-right: 1px solid $white;
+        @include textprop(16px,$link-color);
+        a{
+            color:$link-color;
+        }
+    }
+    .nav-item:last-child{
+        border:0;
+    }
 }
 #second-section{
     background: #cce5e6;
@@ -39,50 +54,43 @@ a{
 .readMoreLink{
     display: none;
 }
-.second-box-section ul,.second-box-section .btn-link{
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    white-space: normal;
-}
-.blockquote{
-    border: 0;
-}
-.blockquote-footer{
-    color: #0c0c0c;
-    font-weight: bold;
-}
-#second-box-section-tab li{
-    flex:2;
+.second-box-section{
+     ul{
+         @include textprop(20px,$link-color);
+    }
+    .btn-link{
+        @include textprop(20px,$link-color);
+    }
 }
 
+.blockquote{
+    border: 0;
+    .blockquote-footer{
+        color:#111;
+    }
+}
+#second-box-section-tab li{
+    @include flexScreen(50%);
+}
 .footer-box-section{
-    margin:5px;
     @include flexScreen(30%);
     background: whitesmoke;
 }
 .form-icon{
-	font-size: 25px;
+    @include textprop(25px, $white);
     background: #0d8ef5;
     padding: 6px 0;
     float: left;
-    color: $white;
     width: 40px;
-    text-align: center;
     position: relative;
     top: 3.5px;
-}
-#EmailAdd{
-    width: 80%;
 }
 .social-link li{
     display: inline-block;
     width: 30px;
     border-radius: 50%;
-    text-align: center;
     margin-right: 5px;
-    color: $white;
+    @include textprop(20px, $white);
 }
 .social-link li:nth-child(1){
 background: #3b5998 ;
@@ -100,28 +108,53 @@ background: #3b5998 ;
 	background: #cb2027 ;
 }
   @media (max-width:900px){
+    #head-nav{
+        li{
+            @include flexScreen(20%);
+            @include textprop(16px,$white);
+        }
+    }
+   #main-navbar{
+    .nav-item {
+       text-align: left;
+    }
+   }
     .second-box-section, .footer-box-section{
         @include flexScreen(100%);
         margin-bottom: 10px;
     }
     .quates-box-section{
-        flex: 1 0 33.3%;
-        max-width: 33.3%;
+        @include flexScreen(100%);
     }
     #second-section .nav-link{
         padding:.5rem;
     }
     .footer-section{
-        flex-direction: column;
+        @include flexDirection(column !important);
     }
 }
 @media (max-width:580px){
+    #head-nav{
+        justify-content: space-between !important;
+        li{
+            @include flexScreen(50%);
+            @include textprop(16px,$white);
+        }
+    }
     .quates-box-section{
         @include flexScreen(100%);
     }
-    #main-navbar .nav-item {
-
-        margin-bottom:5px !important;
+    #main-navbar{
+        .nav{
+         @include flexDirection(column !important);
+        }
+         .nav-item {
+            flex:1 !important;
+            max-width: 100%;
+            border: 0;
+            border-bottom:2px solid $white;
+            @include textprop(18px, $link-color);
+         }
     }
     .readMoreLink{
         display: inline;
