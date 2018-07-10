@@ -8,7 +8,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 gulp.task('js', function () {
     return gulp.src(['node_modules\jquery\dist\jquery.min.js', 'node_modules\bootstrap\dist\js\bootstrap.js', '']) // Gets all files ending with .scss in app/scss

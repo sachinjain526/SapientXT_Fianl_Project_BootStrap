@@ -10,13 +10,26 @@
 </head>
 
 <body>
-    <header class="primary">
-        <h1>DigiTransform</h1>
-        <div class="form-inline my-2 my-lg-0">
-        </div>
+    <header class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Login
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item d-none">
+                    <a class="nav-link" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">DigiTransform</h3>
     </header>
     <nav class="navbar navbar-expand-sm" id="main-navbar">
-        <ul class="navbar-nav w-100 justify-content-between">
+        <ul class="nav w-100 justify-content-between">
             <li class="nav-item">
                 <a class="nav-link active" href="javascript:void(0)">Technology</a>
             </li>
@@ -34,9 +47,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">Health</a>
-            </li>
-            <li class="nav-item ml-3 bg-light">
-                <a class="nav-link" href="javascript:void(0)">Login</a>
             </li>
         </ul>
     </nav>
@@ -339,6 +349,7 @@
                             <i class="fa fa-envelope-square form-icon"></i>
                         </label>
                         <input type="email" name="EmailAdd" id="EmailAdd" placeholder="Email" class="form-control">
+                        <button type="submit" class="btn btn-primary w-75 mx-auto my-2 p-2">Submit</button>
                     </form>
                 </section>
             </div>

@@ -1,8 +1,12 @@
-
+$body-bg:#ececec !default;
+$white:#fff;
+@mixin flexScreen($input) {
+    flex:1 0 $input !important;
+    max-width: $input;
+  }
 @import "node_modules/bootstrap/scss/bootstrap";
 // @import url("./font-awesome.min.css");
 body{
-	background:#ececec;
 	font-family: 'Vidaloka', serif;
     line-height:2em;
     overflow-x: hidden;
@@ -17,16 +21,17 @@ a{
 #main-navbar{
    background:  #1e2e40;
    font-size: 21px;
+   flex-direction: row !important;
 }
-#main-navbar .nav-item {
-    flex-basis: 16%;
-    background: white;
+ .nav-item {
+    @include flexScreen(16.8%);
+    background: $white;
     border-right: 1px solid black;
     text-align: center;
     font-weight: bold;
 }
 .bg-white{
-    background: white;
+    background: $white;
 }
 #second-section{
     background: #cce5e6;
@@ -41,6 +46,9 @@ a{
     text-decoration: none;
     white-space: normal;
 }
+.blockquote{
+    border: 0;
+}
 .blockquote-footer{
     color: #0c0c0c;
     font-weight: bold;
@@ -51,7 +59,7 @@ a{
 
 .footer-box-section{
     margin:5px;
-    flex:1 0 30% !important;
+    @include flexScreen(30%);
     background: whitesmoke;
 }
 .form-icon{
@@ -59,7 +67,7 @@ a{
     background: #0d8ef5;
     padding: 6px 0;
     float: left;
-    color: #fff;
+    color: $white;
     width: 40px;
     text-align: center;
     position: relative;
@@ -74,7 +82,7 @@ a{
     border-radius: 50%;
     text-align: center;
     margin-right: 5px;
-    color: #fff;
+    color: $white;
 }
 .social-link li:nth-child(1){
 background: #3b5998 ;
@@ -92,9 +100,8 @@ background: #3b5998 ;
 	background: #cb2027 ;
 }
   @media (max-width:900px){
-    .second-box-section{
-        flex: 1 0 100%;
-         max-width: 100%;
+    .second-box-section, .footer-box-section{
+        @include flexScreen(100%);
         margin-bottom: 10px;
     }
     .quates-box-section{
@@ -107,19 +114,14 @@ background: #3b5998 ;
     .footer-section{
         flex-direction: column;
     }
-    .footer-box-section{
-        flex: 1 0 100%;
-      max-width: 100%;
-    }
 }
 @media (max-width:580px){
     .quates-box-section{
-      flex: 1 0 100%;
-      max-width: 100%;
+        @include flexScreen(100%);
     }
     #main-navbar .nav-item {
 
-        margin: 0 0 5px 0!important;
+        margin-bottom:5px !important;
     }
     .readMoreLink{
         display: inline;
