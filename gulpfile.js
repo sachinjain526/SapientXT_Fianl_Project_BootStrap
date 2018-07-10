@@ -10,6 +10,13 @@ gulp.task('sass', function () {
             stream: true
         }));
 });
+gulp.task('webfont', function () {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*') // Gets all files ending with .scss in app/scss
+        .pipe(gulp.dest('app/webfonts'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
 gulp.task('js', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/popper.js/dist/popper.min.js']) // Gets all files ending with .scss in app/scss
         .pipe(gulp.dest('app/js'))
@@ -32,4 +39,4 @@ gulp.task('watch', ['browser-sync', 'sass'], function () {
 });
 //The default task (called when you run `gulp` from cli)
 
-gulp.task('default', ['js', 'watch']);
+gulp.task('default', ['js', 'webfont', 'watch']);

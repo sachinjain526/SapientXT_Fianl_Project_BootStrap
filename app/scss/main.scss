@@ -1,3 +1,8 @@
+/* font -awesome*/
+$fa-font-path:"../webfonts";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fa-solid";
+/* bootsrap 4 start from here*/
 $body-bg:#ececec !default;
 $white:#fff;
 $font-weight:bold;
@@ -19,9 +24,8 @@ $link-color:#721c24;
     flex-direction:$input;
 }
 @import "node_modules/bootstrap/scss/bootstrap";
-// @import url("./font-awesome.min.css");
 
-// main css start form here
+/*main css start form here*/
 body{
     overflow-x: hidden;
     font-family: Helvetica, sans-serif;
@@ -32,6 +36,15 @@ body{
 }
 #carouselExampleControls img{
     width: 90%;
+}
+#head-nav{
+    li{
+        @include flexScreen(10%);
+        text-align: $text-align;
+    }
+    a{
+        color: $white;
+    }
 }
 #main-navbar{
    background:  #ced9e6;
@@ -53,6 +66,7 @@ body{
 }
 .readMoreLink{
     display: none;
+    text-decoration: none;
 }
 .second-box-section{
      ul{
@@ -73,7 +87,7 @@ body{
     @include flexScreen(50%);
 }
 .footer-box-section{
-    @include flexScreen(30%);
+    @include flexScreen(33%);
     background: whitesmoke;
 }
 .form-icon{
@@ -82,8 +96,6 @@ body{
     padding: 6px 0;
     float: left;
     width: 40px;
-    position: relative;
-    top: 3.5px;
 }
 .social-link li{
     display: inline-block;
@@ -107,6 +119,7 @@ background: #3b5998 ;
 .social-link li:nth-child(5){ 
 	background: #cb2027 ;
 }
+/* media query for bleo 900 px*/
   @media (max-width:900px){
     #head-nav{
         li{
@@ -133,12 +146,12 @@ background: #3b5998 ;
         @include flexDirection(column !important);
     }
 }
+/* media query for bleo 580 px*/
 @media (max-width:580px){
     #head-nav{
         justify-content: space-between !important;
         li{
             @include flexScreen(50%);
-            @include textprop(16px,$white);
         }
     }
     .quates-box-section{
@@ -155,6 +168,9 @@ background: #3b5998 ;
             border-bottom:2px solid $white;
             @include textprop(18px, $link-color);
          }
+    }
+    .collapse-content{
+        display: none;
     }
     .readMoreLink{
         display: inline;

@@ -28,7 +28,7 @@
         </nav>
         <h3 id="main-header" class="mt-3">DigiTransform</h3>
     </header>
-    <nav class="navbar navbar-expand-sm mb-1 p-1" id="main-navbar">
+    <nav class="navbar navbar-expand-sm mb-1 py-1" id="main-navbar">
         <ul class="nav w-100 justify-content-between">
             <li class="nav-item">
                 <a class="nav-link active pl-1" href="javascript:void(0)">Technology</a>
@@ -122,8 +122,8 @@
                                 to identify each alphabetic letter or numeric digit, and converts each character into an
                                 ASCII code.
                             </p>
-                            <a href="#" class="readMoreLink"> To Read More</a>
-                            <div class="hide-content">
+                            <a href="#hidecontent1" class="readMoreLink" data-toggle="collapse"> To Read More</a>
+                            <div id="hidecontent2" class="collapse-content">
                                 <p> Audio and video digitization uses one of many analog-to-digital conversion processes in which
                                     a continuously variable ( analog ) signal is changed, without altering its essential
                                     content, into a multi-level (digital) signal. The process of sampling measures the amplitude
@@ -146,17 +146,19 @@
                                 are disbound at the Library and then shipped off-site to be photographically imaged and saved
                                 as digital PDF files by our vendor, Digital Divide Data and its affiliates.
                             </p>
-                            <a href="#" class="readMoreLink"> To Read More</a>
-                            <p> DDD then runs optical character recognition on the scanned Herald images. This process assigns
-                                metadata coordinates to each word, making the text searchable for use online.
-                            </p>
-                            <p> DDD2The Herald selected DDD for its successful track record of digitizing campus newspapers and
-                                for its social mission. In addition to providing the highest-quality digitized output, DDD
-                                is a non-profit that uses technology training and employment to improve the quality of life
-                                of young people in developing countries. Much of the organization’s work, including the Herald
-                                project, is completed in Cambodia where workers benefit from health care, fair wages, and
-                                education and career advancement opportunities.
-                            </p>
+                            <a href="#hidecontent2" class="readMoreLink" data-toggle="collapse"> To Read More</a>
+                            <div class="collapse-content" id="hidecontent2">
+                                <p> DDD then runs optical character recognition on the scanned Herald images. This process assigns
+                                    metadata coordinates to each word, making the text searchable for use online.
+                                </p>
+                                <p> DDD2The Herald selected DDD for its successful track record of digitizing campus newspapers
+                                    and for its social mission. In addition to providing the highest-quality digitized output,
+                                    DDD is a non-profit that uses technology training and employment to improve the quality
+                                    of life of young people in developing countries. Much of the organization’s work, including
+                                    the Herald project, is completed in Cambodia where workers benefit from health care,
+                                    fair wages, and education and career advancement opportunities.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -341,7 +343,7 @@
     </main>
     <footer class="text-center">
         <div class="contianer-fuild mt-3 d-flex justify-content-between footer-section">
-            <div class="col-4 p-3 footer-box-section my-2 mx-1">
+            <div class="col-4 p-3 footer-box-section my-2">
                 <section>
                     <h3>Subscribe Us</h3>
                     <form action="/" method="post" class="form-inline">
@@ -369,7 +371,7 @@
                 <h3>Follow Us</h3>
                 <ul class="social-link mt-5">
                     <li>
-                        <i class="fa fa-facebook"></i>
+                        <i class="fas fa-facebook-square"></i>
                     </li>
                     <li>
                         <i class="fa fa-twitter"></i>
