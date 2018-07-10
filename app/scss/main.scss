@@ -2,6 +2,7 @@
 $fa-font-path:"../webfonts";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fa-solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fa-brands";
 /* bootsrap 4 start from here*/
 $body-bg:#ececec !default;
 $white:#fff;
@@ -99,9 +100,10 @@ body{
 }
 .social-link li{
     display: inline-block;
-    width: 30px;
+    width: 37px;
     border-radius: 50%;
     margin-right: 5px;
+    padding: 4px;
     @include textprop(20px, $white);
 }
 .social-link li:nth-child(1){

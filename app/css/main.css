@@ -3532,6 +3532,16 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+
 /* bootsrap 4 start from here*/
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
@@ -9616,9 +9626,10 @@ body {
 
 .social-link li {
   display: inline-block;
-  width: 30px;
+  width: 37px;
   border-radius: 50%;
   margin-right: 5px;
+  padding: 4px;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
