@@ -54,6 +54,9 @@ body{
 main{
     margin-top: 80px;
 }
+.main-box-section{
+    border: 1px solid#cef1ce;
+}
 .section-header{
     @include textprop(24px,$link-color);
 }
@@ -61,6 +64,7 @@ main{
     .carousel-caption{
         background: lightgrey;
         color:#111;
+        opacity: 0.8;
     }
 }
 .readMoreLink{
@@ -68,6 +72,8 @@ main{
     float: right;
 }
 .second-box-section{
+    @include flexScreen(49.8%);
+    border-radius: 5px;
      ul{
          @include textprop(16px,$link-color);
     }
@@ -85,8 +91,19 @@ main{
 #second-box-section-tab li{
     @include flexScreen(50%);
 }
-.footer-box-section{
-    @include flexScreen(33%);
+.ideas-box-section,.bottom-box-section{
+     h3{
+         @include textprop(20px, #0070c9);
+    }
+    img{
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+.footer-box-section,.ideas-box-section{
+    @include flexScreen(33.2%);
+    border-radius: 5px;
     background: whitesmoke;
 }
 .form-icon{
@@ -122,14 +139,14 @@ background: #3b5998 ;
 
 /* media query for bleo 900 px*/
 @media (max-width:1200px) {
-    .quates-box-section{
+    .quates-box-section,.ideas-box-section{
         @include flexScreen(33.3%);
     }
 }
   @media (max-width:900px){
     .second-box-section, .footer-box-section{
         @include flexScreen(100%);
-        margin-bottom: 10px;
+        border:0;
     }
     #second-section .nav-link{
         padding:.5rem;
@@ -140,13 +157,7 @@ background: #3b5998 ;
 }
 /* media query for bleo 580 px*/
 @media (max-width:580px){
-    .quates-box-section{
+    .bottom-box-section,.quates-box-section,.ideas-box-section{
         @include flexScreen(100%);
-    }
-    .collapse-content{
-        display: none;
-    }
-    .readMoreLink{
-        display: inline;
     }
   }

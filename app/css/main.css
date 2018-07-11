@@ -9863,6 +9863,9 @@ body {
 main {
   margin-top: 80px; }
 
+.main-box-section {
+  border: 1px solid #cef1ce; }
+
 .section-header {
   text-align: center;
   font-weight: bold;
@@ -9873,27 +9876,31 @@ main {
 
 #digiCarousel .carousel-caption {
   background: lightgrey;
-  color: #111; }
+  color: #111;
+  opacity: 0.8; }
 
 .readMoreLink {
   text-decoration: none;
   float: right; }
 
-.second-box-section ul {
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  white-space: normal;
-  color: #721c24;
-  font-size: 16px; }
-
-.second-box-section .btn-link {
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  white-space: normal;
-  color: #721c24;
-  font-size: 16px; }
+.second-box-section {
+  flex: 1 0 49.8% !important;
+  max-width: 49.8%;
+  border-radius: 5px; }
+  .second-box-section ul {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: normal;
+    color: #721c24;
+    font-size: 16px; }
+  .second-box-section .btn-link {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: normal;
+    color: #721c24;
+    font-size: 16px; }
 
 .blockquote {
   border: 0; }
@@ -9904,9 +9911,23 @@ main {
   flex: 1 0 50% !important;
   max-width: 50%; }
 
-.footer-box-section {
-  flex: 1 0 33% !important;
-  max-width: 33%;
+.ideas-box-section h3, .bottom-box-section h3 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: normal;
+  color: #0070c9;
+  font-size: 20px; }
+
+.ideas-box-section img, .bottom-box-section img {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px; }
+
+.footer-box-section, .ideas-box-section {
+  flex: 1 0 33.2% !important;
+  max-width: 33.2%;
+  border-radius: 5px;
   background: whitesmoke; }
 
 .form-icon {
@@ -9951,7 +9972,7 @@ main {
 
 /* media query for bleo 900 px*/
 @media (max-width: 1200px) {
-  .quates-box-section {
+  .quates-box-section, .ideas-box-section {
     flex: 1 0 33.3% !important;
     max-width: 33.3%; } }
 
@@ -9959,7 +9980,7 @@ main {
   .second-box-section, .footer-box-section {
     flex: 1 0 100% !important;
     max-width: 100%;
-    margin-bottom: 10px; }
+    border: 0; }
   #second-section .nav-link {
     padding: .5rem; }
   .footer-section {
@@ -9967,10 +9988,6 @@ main {
 
 /* media query for bleo 580 px*/
 @media (max-width: 580px) {
-  .quates-box-section {
+  .bottom-box-section, .quates-box-section, .ideas-box-section {
     flex: 1 0 100% !important;
-    max-width: 100%; }
-  .collapse-content {
-    display: none; }
-  .readMoreLink {
-    display: inline; } }
+    max-width: 100%; } }
