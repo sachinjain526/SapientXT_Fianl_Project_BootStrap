@@ -29,7 +29,6 @@ $link-color:#721c24;
 /*main css start form here*/
 body{
     overflow-x: hidden;
-    font-family: Helvetica, sans-serif;
 }
 #main-header{
     @include textprop(170%, #0a556b);
@@ -43,7 +42,7 @@ body{
    .nav-item {
         @include flexScreen(42%);
         border-right: 1px solid $white;
-        @include textprop(20px,$link-color);
+        @include textprop(16px,$link-color);
         a{
             color:$link-color;
         }
@@ -57,22 +56,20 @@ main{
 }
 #digiCarousel{
     .carousel-caption{
-        color: #721c24;
+        background: lightgrey;
+        color:#fff;
     }
 }
-#second-section{
-    background: #cce5e6;
-}
 .readMoreLink{
-    display: none;
     text-decoration: none;
+    float: right;
 }
 .second-box-section{
      ul{
-         @include textprop(20px,$link-color);
+         @include textprop(16px,$link-color);
     }
     .btn-link{
-        @include textprop(20px,$link-color);
+        @include textprop(16px,$link-color);
     }
 }
 
@@ -121,7 +118,7 @@ background: #3b5998 ;
 }
 
 /* media query for bleo 900 px*/
-@media (max-width:1200px) and (min-width:901px){
+@media (max-width:1200px) {
     .quates-box-section{
         @include flexScreen(33.3%);
     }
@@ -130,9 +127,6 @@ background: #3b5998 ;
     .second-box-section, .footer-box-section{
         @include flexScreen(100%);
         margin-bottom: 10px;
-    }
-    .quates-box-section{
-        @include flexScreen(50%);
     }
     #second-section .nav-link{
         padding:.5rem;

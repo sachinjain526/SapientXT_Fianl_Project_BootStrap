@@ -9829,8 +9829,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*main css start form here*/
 body {
-  overflow-x: hidden;
-  font-family: Helvetica, sans-serif; }
+  overflow-x: hidden; }
 
 #main-header {
   text-align: center;
@@ -9855,7 +9854,7 @@ body {
     text-decoration: none;
     white-space: normal;
     color: #721c24;
-    font-size: 20px; }
+    font-size: 16px; }
     #main-navbar .nav-item a {
       color: #721c24; }
   #main-navbar .nav-item:last-child {
@@ -9865,14 +9864,12 @@ main {
   margin-top: 80px; }
 
 #digiCarousel .carousel-caption {
-  color: #721c24; }
-
-#second-section {
-  background: #cce5e6; }
+  background: lightgrey;
+  color: #fff; }
 
 .readMoreLink {
-  display: none;
-  text-decoration: none; }
+  text-decoration: none;
+  float: right; }
 
 .second-box-section ul {
   text-align: center;
@@ -9880,7 +9877,7 @@ main {
   text-decoration: none;
   white-space: normal;
   color: #721c24;
-  font-size: 20px; }
+  font-size: 16px; }
 
 .second-box-section .btn-link {
   text-align: center;
@@ -9888,7 +9885,7 @@ main {
   text-decoration: none;
   white-space: normal;
   color: #721c24;
-  font-size: 20px; }
+  font-size: 16px; }
 
 .blockquote {
   border: 0; }
@@ -9945,7 +9942,7 @@ main {
   background: #cb2027; }
 
 /* media query for bleo 900 px*/
-@media (max-width: 1200px) and (min-width: 901px) {
+@media (max-width: 1200px) {
   .quates-box-section {
     flex: 1 0 33.3% !important;
     max-width: 33.3%; } }
@@ -9955,9 +9952,6 @@ main {
     flex: 1 0 100% !important;
     max-width: 100%;
     margin-bottom: 10px; }
-  .quates-box-section {
-    flex: 1 0 50% !important;
-    max-width: 50%; }
   #second-section .nav-link {
     padding: .5rem; }
   .footer-section {
