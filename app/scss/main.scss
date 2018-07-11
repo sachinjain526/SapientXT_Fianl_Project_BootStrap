@@ -9,6 +9,7 @@ $white:#fff;
 $font-weight:bold;
 $text-align:center;
 $link-color:#721c24;
+$border-radius: 5px;
 @mixin flexScreen($input) {
     flex:1 0 $input !important;
     max-width: $input;
@@ -34,8 +35,8 @@ body{
     @include textprop(170%, #0a556b);
     text-shadow: 5px 4px 5px #aeaebf;
 }
-#carouselExampleControls img{
-    width: 90%;
+img{
+    width: 100%;
 }
 #main-navbar{
     background: #2974ce;
@@ -53,10 +54,11 @@ body{
 }
 main{
     margin-top: 80px;
+    .main-box-section{
+        border: 1px solid#cef1ce;
+    }
 }
-.main-box-section{
-    border: 1px solid#cef1ce;
-}
+
 .section-header{
     @include textprop(24px,$link-color);
 }
@@ -68,12 +70,13 @@ main{
     }
 }
 .readMoreLink{
+    @include textprop(16px,$link-color);
     text-decoration: none;
     float: right;
 }
 .second-box-section{
     @include flexScreen(49.8%);
-    border-radius: 5px;
+    border-radius: $border-radius;
      ul{
          @include textprop(16px,$link-color);
     }
@@ -81,12 +84,11 @@ main{
         @include textprop(16px,$link-color);
     }
 }
-
-.blockquote{
-    border: 0;
-    .blockquote-footer{
-        color:#111;
-    }
+.ideas-box-section,.bottom-box-section{
+    border: 1px solid lightseagreen;
+}
+.blockquote-footer{
+    color:#111;
 }
 #second-box-section-tab li{
     @include flexScreen(50%);
@@ -96,22 +98,14 @@ main{
          @include textprop(20px, #0070c9);
     }
     img{
-        width: 100%;
         padding: 5px;
-        border-radius: 10px;
+        border-radius: $border-radius;
     }
 }
 .footer-box-section,.ideas-box-section{
     @include flexScreen(33.2%);
-    border-radius: 5px;
-    background: whitesmoke;
-}
-.form-icon{
-    @include textprop(25px, $white);
-    background: #0d8ef5;
-    padding: 6px 0;
-    float: left;
-    width: 40px;
+    border-radius:$border-radius;
+    background: $white;
 }
 .social-link li{
     display: inline-block;
@@ -146,10 +140,6 @@ background: #3b5998 ;
   @media (max-width:900px){
     .second-box-section, .footer-box-section{
         @include flexScreen(100%);
-        border:0;
-    }
-    #second-section .nav-link{
-        padding:.5rem;
     }
     .footer-section{
         @include flexDirection(column !important);
