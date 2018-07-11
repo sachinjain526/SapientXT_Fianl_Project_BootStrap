@@ -9863,6 +9863,14 @@ body {
 main {
   margin-top: 80px; }
 
+.section-header {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: normal;
+  color: #721c24;
+  font-size: 24px; }
+
 #digiCarousel .carousel-caption {
   background: lightgrey;
   color: #fff; }

@@ -54,6 +54,9 @@ body{
 main{
     margin-top: 80px;
 }
+.section-header{
+    @include textprop(24px,$link-color);
+}
 #digiCarousel{
     .carousel-caption{
         background: lightgrey;
