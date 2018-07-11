@@ -3,26 +3,20 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
-    return gulp.src('app/scss/*.scss') // Gets all files ending with .scss in app/scss
+    return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
         .pipe(sass())
         .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+        .pipe(browserSync.stream());
 });
 gulp.task('webfont', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*') // Gets all files ending with .scss in app/scss
         .pipe(gulp.dest('app/webfonts'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+        .pipe(browserSync.stream());
 });
 gulp.task('js', function () {
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/popper.js/dist/popper.min.js']) // Gets all files ending with .scss in app/scss
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/popper/index.js']) // Gets all files ending with .scss in app/scss
         .pipe(gulp.dest('app/js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(browserSync.stream());
 });
 gulp.task('browser-sync', function () {
     browserSync.init(["app/css/*.css", "app/js/*.js"], {
