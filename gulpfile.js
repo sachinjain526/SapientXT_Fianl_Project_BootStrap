@@ -14,7 +14,7 @@ gulp.task('webfont', function () {
         .pipe(browserSync.stream());
 });
 gulp.task('js', function () {
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/popper/index.js']) // Gets all files ending with .scss in app/scss
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/popper.js/dist/umd/popper.js']) // Gets all files ending with .scss in app/scss
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.stream());
 });
