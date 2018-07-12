@@ -1,0 +1,10 @@
+body{
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+}
+#main-header{
+    @include textprop(170%, #0a556b);
+    text-shadow: 5px 4px 5px #aeaebf;
+}
