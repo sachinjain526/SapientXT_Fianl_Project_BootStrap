@@ -1,7 +1,7 @@
 main{
     margin-top: 80px;
     .main-box-section{
-        border: 1px solid#cef1ce;
+        border-bottom: 1px solid#57B8FF;
     }
 }
 .section-header{
@@ -25,12 +25,15 @@ main{
      ul{
          @include textprop(16px,$link-color);
     }
-    .btn-link{
+    .btn-link,.nav-link{
         @include textprop(16px,$link-color);
     }
 }
 .ideas-box-section,.bottom-box-section{
-    border: 1px solid lightseagreen;
+    border-right: 1px solid lightseagreen;
+}
+.ideas-box-section:last-child,.bottom-box-section:last-child{
+    border-right: 0;
 }
 .blockquote-footer{
     color:#111;

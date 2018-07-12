@@ -9829,7 +9829,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*main css start form here*/
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: #D1CFE2; }
 
 img {
   width: 100%; }
@@ -9891,7 +9892,7 @@ img {
 main {
   margin-top: 80px; }
   main .main-box-section {
-    border: 1px solid #cef1ce; }
+    border-bottom: 1px solid #57B8FF; }
 
 .section-header {
   text-align: center;
@@ -9927,7 +9928,7 @@ main {
     white-space: normal;
     color: #721c24;
     font-size: 16px; }
-  .second-box-section .btn-link {
+  .second-box-section .btn-link, .second-box-section .nav-link {
     text-align: center;
     font-weight: bold;
     text-decoration: none;
@@ -9936,7 +9937,10 @@ main {
     font-size: 16px; }
 
 .ideas-box-section, .bottom-box-section {
-  border: 1px solid lightseagreen; }
+  border-right: 1px solid lightseagreen; }
+
+.ideas-box-section:last-child, .bottom-box-section:last-child {
+  border-right: 0; }
 
 .blockquote-footer {
   color: #111; }
